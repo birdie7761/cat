@@ -154,7 +154,7 @@ public class DefaultClientConfigManager implements LogEnabled, ClientConfigManag
 	}
 
 	private String loadProjectName() {
-		String appName = null;
+		String appId = null;
 		InputStream in = null;
 		try {
 			in = Thread.currentThread().getContextClassLoader().getResourceAsStream(PROPERTIES_CLIENT_XML);
@@ -167,11 +167,11 @@ public class DefaultClientConfigManager implements LogEnabled, ClientConfigManag
 
 				prop.load(in);
 
-				appName = prop.getProperty("app.name");
-				if (appName != null) {
-					m_logger.info(String.format("Find domain name %s from app.properties.", appName));
+				appId = prop.getProperty("app.id");
+				if (appId != null) {
+					m_logger.info(String.format("Find domain name %s from app.properties.", appId));
 				} else {
-					m_logger.info(String.format("Can't find app.name from app.properties."));
+					m_logger.info(String.format("Can't find app.id from app.properties."));
 					return null;
 				}
 			} else {
@@ -187,7 +187,7 @@ public class DefaultClientConfigManager implements LogEnabled, ClientConfigManag
 				}
 			}
 		}
-		return appName;
+		return appId;
 	}
 
 	@Override
