@@ -192,7 +192,7 @@ public class TaskComponentConfigurator extends AbstractResourceConfigurator {
 		all.add(C(TaskBuilder.class, StorageReportBuilder.ID, StorageReportBuilder.class).req(StorageReportService.class,
 		      StorageMergeHelper.class));
 
-		all.add(C(TaskBuilder.class, CmdbInfoReloadBuilder.ID, CmdbInfoReloadBuilder.class).req(ProjectUpdateTask.class));
+		//all.add(C(TaskBuilder.class, CmdbInfoReloadBuilder.ID, CmdbInfoReloadBuilder.class).req(ProjectUpdateTask.class));
 
 		all.add(C(CapacityUpdateStatusManager.class).req(OverloadDao.class, ConfigDao.class));
 
