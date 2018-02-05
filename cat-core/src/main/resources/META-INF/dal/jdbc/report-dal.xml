@@ -93,6 +93,12 @@
 					AND <FIELD name='id'/> = ${id};
 				]]></statement>
 			</query>
+			<query name="delete-before-period" type="DELETE">
+				<statement><![CDATA[
+					DELETE FROM <TABLE/>
+					WHERE <FIELD name='report-period'/> <= ${report-period};
+				]]></statement>
+			</query>
 		</query-defs>
 	</entity>
 	<entity name="hostinfo" table="hostinfo" alias="h">
@@ -379,6 +385,13 @@
 					<IF type='NOT_NULL' field='ip'>
 						AND <FIELD name='ip'/> = ${ip}
 					</IF>	
+				]]></statement>
+			</query>
+			<query name="delete-before-period" type="DELETE">
+				<param name="period" />
+				<statement><![CDATA[
+					DELETE FROM <TABLE/>
+					WHERE <FIELD name='period'/> <= ${period}
 				]]></statement>
 			</query>
 		</query-defs>

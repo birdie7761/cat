@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- THIS FILE WAS AUTO GENERATED FROM class com.dianping.cat.build.ComponentsConfigurator, DO NOT EDIT IT -->
 <plexus>
 	<components>
 		<component>
@@ -86,21 +87,6 @@
 				<requirement>
 					<role>com.dianping.cat.report.service.ModelService</role>
 					<role-hint>dependency</role-hint>
-				</requirement>
-			</requirements>
-		</component>
-		<component>
-			<role>com.dianping.cat.report.task.cmdb.ProjectUpdateTask</role>
-			<implementation>com.dianping.cat.report.task.cmdb.ProjectUpdateTask</implementation>
-			<requirements>
-				<requirement>
-					<role>com.dianping.cat.service.ProjectService</role>
-				</requirement>
-				<requirement>
-					<role>com.dianping.cat.service.HostinfoService</role>
-				</requirement>
-				<requirement>
-					<role>com.dianping.cat.report.page.transaction.service.TransactionReportService</role>
 				</requirement>
 			</requirements>
 		</component>
@@ -1487,16 +1473,6 @@
 			</requirements>
 		</component>
 		<component>
-			<role>com.dianping.cat.report.task.TaskBuilder</role>
-			<role-hint>cmdb</role-hint>
-			<implementation>com.dianping.cat.report.task.cmdb.CmdbInfoReloadBuilder</implementation>
-			<requirements>
-				<requirement>
-					<role>com.dianping.cat.report.task.cmdb.ProjectUpdateTask</role>
-				</requirement>
-			</requirements>
-		</component>
-		<component>
 			<role>com.dianping.cat.report.page.overload.task.CapacityUpdateStatusManager</role>
 			<implementation>com.dianping.cat.report.page.overload.task.CapacityUpdateStatusManager</implementation>
 			<requirements>
@@ -1764,6 +1740,26 @@
 					<role>com.dianping.cat.report.task.TaskBuilder</role>
 					<role-hint>matrix</role-hint>
 					<field-name>m_matrixReportBuilder</field-name>
+				</requirement>
+			</requirements>
+		</component>
+		<component>
+			<role>com.dianping.cat.report.task.TaskBuilder</role>
+			<role-hint>TaskDatabasePruner</role-hint>
+			<implementation>com.dianping.cat.report.page.clear.task.TaskDatabasePruner</implementation>
+			<requirements>
+				<requirement>
+					<role>com.dianping.cat.core.dal.TaskDao</role>
+				</requirement>
+			</requirements>
+		</component>
+		<component>
+			<role>com.dianping.cat.report.task.TaskBuilder</role>
+			<role-hint>GraphDatabasePruner</role-hint>
+			<implementation>com.dianping.cat.report.page.clear.task.GraphDatabasePruner</implementation>
+			<requirements>
+				<requirement>
+					<role>com.dianping.cat.core.dal.GraphDao</role>
 				</requirement>
 			</requirements>
 		</component>

@@ -73,4 +73,7 @@ public class Constants {
 
 	public static final String APP = "app";
 
+	public static final String TASK_DATABASE_PRUNER = "TaskDatabasePruner";
+
+	public static final String GRAPH_DATABASE_PRUNER = "GraphDatabasePruner";
 }

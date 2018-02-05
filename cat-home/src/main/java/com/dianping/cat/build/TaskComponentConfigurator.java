@@ -34,6 +34,8 @@ import com.dianping.cat.report.page.app.service.AppReportService;
 import com.dianping.cat.report.page.app.task.AppDatabasePruner;
 import com.dianping.cat.report.page.app.task.AppReportBuilder;
 import com.dianping.cat.report.page.app.task.CommandAutoCompleter;
+import com.dianping.cat.report.page.clear.task.GraphDatabasePruner;
+import com.dianping.cat.report.page.clear.task.TaskDatabasePruner;
 import com.dianping.cat.report.page.cross.service.CrossReportService;
 import com.dianping.cat.report.page.cross.task.CrossReportBuilder;
 import com.dianping.cat.report.page.dependency.graph.TopologyGraphBuilder;
@@ -242,6 +244,8 @@ public class TaskComponentConfigurator extends AbstractResourceConfigurator {
 		      .req(TaskBuilder.class, CrossReportBuilder.ID, "m_crossReportBuilder")
 		      .req(TaskBuilder.class, MatrixReportBuilder.ID, "m_matrixReportBuilder"));
 
+		all.add(C(TaskBuilder.class, TaskDatabasePruner.ID, TaskDatabasePruner.class).req(TaskDao.class));
+		all.add(C(TaskBuilder.class, GraphDatabasePruner.ID, GraphDatabasePruner.class).req(GraphDao.class));
 		return all;
 	}
 }
