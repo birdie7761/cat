@@ -17,3 +17,10 @@ cat-client/src/main/resources/com/dianping/cat/configuration/client/config.xsd
 
 cat-client/src/main/resources/com/dianping/cat/status/model/status.xsd
 maven/
+pom.xml.versionsBackup
+cat-maven-plugin/pom.xml.versionsBackup
+cat-home/pom.xml.versionsBackup
+cat-hadoop/pom.xml.versionsBackup
+cat-core/pom.xml.versionsBackup
+cat-consumer/pom.xml.versionsBackup
+cat-client/pom.xml.versionsBackup
