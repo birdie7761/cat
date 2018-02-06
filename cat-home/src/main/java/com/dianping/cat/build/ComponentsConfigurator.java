@@ -121,8 +121,8 @@ public class ComponentsConfigurator extends AbstractJdbcResourceConfigurator {
 		      .req(ModelService.class, DependencyAnalyzer.ID));
 
 		// update project database
-//		all.add(C(ProjectUpdateTask.class).req(ProjectService.class, HostinfoService.class)//
-//		      .req(TransactionReportService.class));
+		all.add(C(ProjectUpdateTask.class).req(ProjectService.class, HostinfoService.class)//
+		      .req(TransactionReportService.class));
 
 		all.add(C(StorageAlertInfoRTContainer.class));
 		all.add(C(StorageAlertInfoBuilder.class).req(StorageAlertInfoRTContainer.class));
