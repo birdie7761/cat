@@ -1,0 +1,39 @@
+1.把Maven文件夹拷贝到本地maven repo仓库；
+2.POM.XML中添加
+        <dependency>
+            <groupId>com.dianping.cat</groupId>
+            <artifactId>cat-client</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.21</version>
+        </dependency>
+3. 配置
+3.1设置应用标识
+META-INF/app.properties
+app.id=
+3.2.1配置CAT服务器地址
+META-INF/cat/client.xml
+<?xml version="1.0" encoding="utf-8"?>
+
+<config mode="client" xmlns:xsi="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="config.xsd">
+	<servers>
+		<!-- 测试环境 - 配置CAT服务器地址-->
+		<server ip="172.20.70.78" port="2280" http-port="8080"></server>
+		<server ip="172.20.70.79" port="2280" http-port="8080"></server>
+		<server ip="172.20.70.80" port="2280" http-port="8080"></server>
+
+		<!-- 生产环境 - 配置CAT服务器地址
+		<server ip="172.20.94.91" port="2280" http-port="8080"></server>
+		<server ip="172.20.94.92" port="2280" http-port="8080"></server>
+		<server ip="172.20.94.93" port="2280" http-port="8080"></server>
+		-->
+	</servers>
+</config>
+3.2.2全局设置
+windows
+D:\data\appdatas\cat\client.xml
+linux
+/data/appdatas/cat/client.xml
