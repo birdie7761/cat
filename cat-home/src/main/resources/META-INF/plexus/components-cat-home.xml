@@ -91,6 +91,21 @@
 			</requirements>
 		</component>
 		<component>
+			<role>com.dianping.cat.report.task.cmdb.ProjectUpdateTask</role>
+			<implementation>com.dianping.cat.report.task.cmdb.ProjectUpdateTask</implementation>
+			<requirements>
+				<requirement>
+					<role>com.dianping.cat.service.ProjectService</role>
+				</requirement>
+				<requirement>
+					<role>com.dianping.cat.service.HostinfoService</role>
+				</requirement>
+				<requirement>
+					<role>com.dianping.cat.report.page.transaction.service.TransactionReportService</role>
+				</requirement>
+			</requirements>
+		</component>
+		<component>
 			<role>com.dianping.cat.report.page.storage.topology.StorageAlertInfoRTContainer</role>
 			<implementation>com.dianping.cat.report.page.storage.topology.StorageAlertInfoRTContainer</implementation>
 		</component>
@@ -1469,6 +1484,16 @@
 				</requirement>
 				<requirement>
 					<role>com.dianping.cat.report.page.storage.transform.StorageMergeHelper</role>
+				</requirement>
+			</requirements>
+		</component>
+		<component>
+			<role>com.dianping.cat.report.task.TaskBuilder</role>
+			<role-hint>cmdb</role-hint>
+			<implementation>com.dianping.cat.report.task.cmdb.CmdbInfoReloadBuilder</implementation>
+			<requirements>
+				<requirement>
+					<role>com.dianping.cat.report.task.cmdb.ProjectUpdateTask</role>
 				</requirement>
 			</requirements>
 		</component>

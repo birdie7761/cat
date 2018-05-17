@@ -2,6 +2,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.juneyaoair</groupId>
+		<artifactId>super-pom</artifactId>
+		<version>1.0.0</version>
+	</parent>
 	<groupId>com.dianping.cat</groupId>
 	<artifactId>parent</artifactId>
 	<version>2.0.1</version>
@@ -261,22 +266,11 @@ encoding/<project>=UTF-8
          <url>http://unidal.org/nexus/content/repositories/releases/</url>
       </pluginRepository>
    </pluginRepositories>
-   <distributionManagement>
-      <repository>
-         <id>nexus</id>
-         <url>${releases.repo}</url>
-      </repository>
-      <snapshotRepository>
-         <id>snapshots</id>
-         <url>${snapshots.repo}</url>
-      </snapshotRepository>
-   </distributionManagement>
 	<properties>
 		<project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
 
                 <framework.version>4.0.0</framework.version>
                 <jetty.version>9.2.9.v20150224</jetty.version>
                 <servlet-api.version>3.1.0</servlet-api.version>
-		<releases.repo>http://172.20.122.21:8081/repository/maven-releases/</releases.repo>
 	</properties>
 </project>
