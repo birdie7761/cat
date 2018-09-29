@@ -2,6 +2,8 @@
 /target/*
 /bin/*
 /*/target/*
+/*/*/target/*
+/*/*/*/target/*
 /*/bin/*
 /*/.*
 .*
@@ -24,3 +26,4 @@ cat-hadoop/pom.xml.versionsBackup
 cat-core/pom.xml.versionsBackup
 cat-consumer/pom.xml.versionsBackup
 cat-client/pom.xml.versionsBackup
+work/
