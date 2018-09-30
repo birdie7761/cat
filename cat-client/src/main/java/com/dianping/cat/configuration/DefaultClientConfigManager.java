@@ -154,6 +154,16 @@ public class DefaultClientConfigManager implements LogEnabled, ClientConfigManag
 	}
 
 	private String loadProjectName() {
+		String appId = System.getProperty("app.id");
+		if(appId != null) {
+			m_logger.info(String.format("Find domain name %s from System.properties", appId));
+		} else {
+			appId = loadProjectNameFromPropertyFile();
+		}
+		return appId;
+	}
+
+	private String loadProjectNameFromPropertyFile() {
 		String appId = null;
 		InputStream in = null;
 		try {
