@@ -1,4 +1,4 @@
-1.把Maven文件夹拷贝到本地maven repo仓库；
+﻿1.把Maven文件夹拷贝到本地maven repo仓库；
 2.POM.XML中添加
         <dependency>
             <groupId>com.dianping.cat</groupId>
@@ -11,7 +11,7 @@
             <version>1.7.21</version>
         </dependency>
 3. 配置
-3.1设置应用标识
+3.1设置应用标识(文件不能是UTF-8编码，可以是GBK)
 META-INF/app.properties
 app.id=
 3.2.1配置CAT服务器地址
