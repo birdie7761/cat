@@ -106,13 +106,13 @@
 			</dependency>
 			<dependency>
 				<groupId>javax.servlet</groupId>
-				<artifactId>servlet-api</artifactId>
-				<version>2.5</version>
+				<artifactId>javax.servlet-api</artifactId>
+				<version>3.1.0</version>
 			</dependency>
 			<dependency>
 				<groupId>javax.servlet.jsp</groupId>
-				<artifactId>jsp-api</artifactId>
-				<version>2.1</version>
+				<artifactId>javax.servlet.jsp-api</artifactId>
+				<version>2.3.3</version>
 			</dependency>
 			<dependency>
 				<groupId>mysql</groupId>
@@ -133,11 +133,6 @@
 				<groupId>com.google.code.gson</groupId>
 				<artifactId>gson</artifactId>
 				<version>2.3.1</version>
-			</dependency>
-            <dependency>
-                <groupId>commons-lang</groupId>
-                <artifactId>commons-lang</artifactId>
-                <version>2.6</version>
 			</dependency>
 			<dependency>
 	            <groupId>org.apache.httpcomponents</groupId>
@@ -310,5 +305,6 @@ org.eclipse.jdt.core.compiler.compliance=1.7
    </pluginRepositories>
 	<properties>
 		<project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
+		<compilerArgument>-Xlint:deprecation,unchecked</compilerArgument>
     </properties>
 </project>
