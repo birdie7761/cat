@@ -18,7 +18,7 @@
  */
 package com.dianping.cat.consumer;
 
-import org.codehaus.plexus.util.StringUtils;
+import org.apache.commons.lang.StringUtils;
 
 public class GraphTrendUtil {
 	public static final String GRAPH_SPLITTER = ";";

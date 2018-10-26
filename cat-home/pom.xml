@@ -42,6 +42,12 @@
       <dependency>
          <groupId>org.unidal.framework</groupId>
          <artifactId>foundation-service</artifactId>
+         <exclusions>
+            <exclusion>
+               <artifactId>plexus-utils</artifactId>
+               <groupId>org.codehaus.plexus</groupId>
+            </exclusion>
+         </exclusions>
       </dependency>
       <dependency>
          <groupId>javax.servlet</groupId>
@@ -86,6 +92,12 @@
          <groupId>org.apache.commons</groupId>
          <artifactId>commons-email</artifactId>
          <version>1.1</version>
+         <exclusions>
+            <exclusion>
+               <artifactId>mail</artifactId>
+               <groupId>javax.mail</groupId>
+            </exclusion>
+         </exclusions>
       </dependency>
       <dependency>
          <groupId>javax.mail</groupId>
@@ -101,11 +113,58 @@
     	<groupId>org.apache.commons</groupId>
     	<artifactId>commons-jexl3</artifactId>
     	<version>3.0</version>
-	</dependency>
+        <exclusions>
+           <exclusion>
+              <artifactId>commons-logging</artifactId>
+              <groupId>commons-logging</groupId>
+           </exclusion>
+        </exclusions>
+     </dependency>
       <dependency>
          <groupId>com.onelogin</groupId>
          <artifactId>java-saml</artifactId>
          <version>2.2.0</version>
+         <exclusions>
+            <exclusion>
+               <artifactId>slf4j-api</artifactId>
+               <groupId>org.slf4j</groupId>
+            </exclusion>
+         </exclusions>
+      </dependency>
+      <dependency>
+         <groupId>org.apache.tomcat.embed</groupId>
+         <artifactId>tomcat-embed-websocket</artifactId>
+         <version>${tomcat.embed.version}</version>
+         <scope>test</scope>
+      </dependency>
+      <dependency>
+         <groupId>org.apache.tomcat.embed</groupId>
+         <artifactId>tomcat-embed-core</artifactId>
+         <version>${tomcat.embed.version}</version>
+         <scope>test</scope>
+      </dependency>
+      <dependency>
+         <groupId>org.apache.tomcat.embed</groupId>
+         <artifactId>tomcat-embed-logging-juli</artifactId>
+         <version>${tomcat.embed.version}</version>
+         <scope>test</scope>
+      </dependency>
+
+      <dependency>
+         <groupId>org.codehaus.plexus</groupId>
+         <artifactId>plexus-utils</artifactId>
+      </dependency>
+
+      <dependency>
+         <groupId>org.slf4j</groupId>
+         <artifactId>jcl-over-slf4j</artifactId>
+         <version>1.7.25</version>
+      </dependency>
+
+      <dependency>
+         <groupId>ch.qos.logback</groupId>
+         <artifactId>logback-classic</artifactId>
+         <version>1.2.3</version>
       </dependency>
    </dependencies>
    <build>
@@ -222,6 +281,7 @@
    <properties>
       <env>alpha</env>
       <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
+      <tomcat.embed.version>8.0.53</tomcat.embed.version>
    </properties>
 </project>
 

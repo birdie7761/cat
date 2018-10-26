@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>com.juneyaoair</groupId>
 		<artifactId>super-pom</artifactId>
-		<version>1.0.0</version>
+		<version>1.0.3</version>
 	</parent>
 	<groupId>com.dianping.cat</groupId>
 	<artifactId>parent</artifactId>
@@ -190,6 +190,11 @@
          		<artifactId>c3p0</artifactId>
          		<version>0.9.5.1</version>
       		</dependency>
+			<dependency>
+				<groupId>org.codehaus.plexus</groupId>
+				<artifactId>plexus-utils</artifactId>
+				<version>3.0.20</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	<build>
