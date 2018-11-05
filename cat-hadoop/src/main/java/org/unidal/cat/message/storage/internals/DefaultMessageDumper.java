@@ -27,8 +27,8 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import org.codehaus.plexus.logging.LogEnabled;
-import org.codehaus.plexus.logging.Logger;
+import org.unidal.lookup.logging.LogEnabled;
+import org.unidal.lookup.logging.Logger;
 import org.unidal.cat.message.storage.BlockDumperManager;
 import org.unidal.cat.message.storage.BucketManager;
 import org.unidal.cat.message.storage.MessageDumper;

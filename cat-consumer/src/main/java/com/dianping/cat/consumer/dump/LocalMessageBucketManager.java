@@ -36,16 +36,16 @@ import com.dianping.cat.message.storage.MessageBucket;
 import com.dianping.cat.message.storage.MessageBucketManager;
 import com.dianping.cat.statistic.ServerStatisticManager;
 import io.netty.buffer.ByteBuf;
-import org.codehaus.plexus.logging.LogEnabled;
-import org.codehaus.plexus.logging.Logger;
-import org.codehaus.plexus.personality.plexus.lifecycle.phase.Initializable;
-import org.codehaus.plexus.personality.plexus.lifecycle.phase.InitializationException;
 import org.unidal.helper.Scanners;
 import org.unidal.helper.Scanners.FileMatcher;
 import org.unidal.helper.Threads;
 import org.unidal.helper.Threads.Task;
 import org.unidal.lookup.ContainerHolder;
 import org.unidal.lookup.annotation.Inject;
+import org.unidal.lookup.extension.Initializable;
+import org.unidal.lookup.extension.InitializationException;
+import org.unidal.lookup.logging.LogEnabled;
+import org.unidal.lookup.logging.Logger;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -57,7 +57,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.LockSupport;
 
 public class LocalMessageBucketManager extends ContainerHolder
-						implements MessageBucketManager, Initializable,	LogEnabled {
+						implements MessageBucketManager, Initializable, LogEnabled {
 
 	public static final String ID = "local";
 

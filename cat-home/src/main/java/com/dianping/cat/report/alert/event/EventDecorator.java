@@ -26,8 +26,8 @@ import java.util.Map;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;
-import org.codehaus.plexus.personality.plexus.lifecycle.phase.Initializable;
-import org.codehaus.plexus.personality.plexus.lifecycle.phase.InitializationException;
+import org.unidal.lookup.extension.Initializable;
+import org.unidal.lookup.extension.InitializationException;
 
 import com.dianping.cat.Cat;
 import com.dianping.cat.alarm.spi.AlertEntity;

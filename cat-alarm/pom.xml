@@ -5,6 +5,7 @@
     <groupId>com.dianping.cat</groupId>
     <artifactId>parent</artifactId>
     <version>3.0.0</version>
+    <relativePath>../pom.xml</relativePath>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>cat-alarm</artifactId>
@@ -20,14 +21,8 @@
       <artifactId>cat-core</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.unidal.framework</groupId>
       <artifactId>foundation-service</artifactId>
-      <exclusions>
-        <exclusion>
-          <artifactId>plexus-utils</artifactId>
-          <groupId>org.codehaus.plexus</groupId>
-        </exclusion>
-      </exclusions>
+      <groupId>org.unidal.foundation</groupId>
     </dependency>
     <dependency>
       <groupId>org.unidal.framework</groupId>

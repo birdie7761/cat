@@ -20,8 +20,8 @@ package org.unidal.cat.message.storage.internals;
 
 import java.io.File;
 
-import org.codehaus.plexus.personality.plexus.lifecycle.phase.Initializable;
-import org.codehaus.plexus.personality.plexus.lifecycle.phase.InitializationException;
+import org.unidal.lookup.extension.Initializable;
+import org.unidal.lookup.extension.InitializationException;
 import org.unidal.cat.message.storage.StorageConfiguration;
 import org.unidal.lookup.annotation.Named;
 

@@ -18,14 +18,17 @@
  */
 package com.dianping.cat;
 
+import org.eclipse.jetty.servlets.GzipFilter;
+import org.eclipse.jetty.webapp.WebAppContext;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
-import org.mortbay.jetty.Handler;
-import org.mortbay.jetty.webapp.WebAppContext;
-import org.mortbay.servlet.GzipFilter;
 import org.unidal.test.jetty.JettyServer;
+
+import java.util.EnumSet;
+
+import javax.servlet.DispatcherType;
 
 @RunWith(JUnit4.class)
 public class TestServer extends JettyServer {
@@ -54,7 +57,7 @@ public class TestServer extends JettyServer {
 
 	@Override
 	protected void postConfigure(WebAppContext context) {
-		context.addFilter(GzipFilter.class, "/*", Handler.ALL);
+		context.addFilter(GzipFilter.class, "/*", EnumSet.of(DispatcherType.INCLUDE));
 	}
 
 	@Test

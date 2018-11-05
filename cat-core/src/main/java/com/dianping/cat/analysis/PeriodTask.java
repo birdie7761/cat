@@ -22,8 +22,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-import org.codehaus.plexus.logging.LogEnabled;
-import org.codehaus.plexus.logging.Logger;
+import org.unidal.lookup.logging.LogEnabled;
+import org.unidal.lookup.logging.Logger;
 import org.unidal.helper.Threads.Task;
 
 import com.dianping.cat.Cat;

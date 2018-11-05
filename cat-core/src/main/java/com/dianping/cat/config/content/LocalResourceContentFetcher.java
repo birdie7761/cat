@@ -18,8 +18,8 @@
  */
 package com.dianping.cat.config.content;
 
-import org.codehaus.plexus.logging.LogEnabled;
-import org.codehaus.plexus.logging.Logger;
+import org.unidal.lookup.logging.LogEnabled;
+import org.unidal.lookup.logging.Logger;
 import org.unidal.helper.Files;
 import org.unidal.lookup.annotation.Named;
 

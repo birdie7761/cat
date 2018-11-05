@@ -25,8 +25,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import org.codehaus.plexus.logging.LogEnabled;
-import org.codehaus.plexus.logging.Logger;
+import org.unidal.lookup.logging.LogEnabled;
+import org.unidal.lookup.logging.Logger;
 import org.unidal.helper.Splitters;
 import org.unidal.helper.Threads.Task;
 import org.unidal.lookup.annotation.Inject;

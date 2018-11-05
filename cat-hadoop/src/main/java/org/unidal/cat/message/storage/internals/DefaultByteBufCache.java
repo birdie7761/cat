@@ -24,10 +24,10 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import io.netty.util.ReferenceCountUtil;
-import org.codehaus.plexus.logging.LogEnabled;
-import org.codehaus.plexus.logging.Logger;
-import org.codehaus.plexus.personality.plexus.lifecycle.phase.Initializable;
-import org.codehaus.plexus.personality.plexus.lifecycle.phase.InitializationException;
+import org.unidal.lookup.logging.LogEnabled;
+import org.unidal.lookup.logging.Logger;
+import org.unidal.lookup.extension.Initializable;
+import org.unidal.lookup.extension.InitializationException;
 import org.unidal.lookup.annotation.Named;
 
 import com.dianping.cat.Cat;

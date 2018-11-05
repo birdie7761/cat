@@ -24,8 +24,8 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-import org.codehaus.plexus.logging.LogEnabled;
-import org.codehaus.plexus.logging.Logger;
+import org.unidal.lookup.logging.LogEnabled;
+import org.unidal.lookup.logging.Logger;
 import org.unidal.cat.message.storage.BlockDumper;
 import org.unidal.cat.message.storage.BlockDumperManager;
 import org.unidal.lookup.ContainerHolder;

@@ -24,8 +24,8 @@ import java.util.List;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
-import org.codehaus.plexus.personality.plexus.lifecycle.phase.Initializable;
-import org.codehaus.plexus.personality.plexus.lifecycle.phase.InitializationException;
+import org.unidal.lookup.extension.Initializable;
+import org.unidal.lookup.extension.InitializationException;
 import org.unidal.helper.Splitters;
 import org.unidal.lookup.annotation.Inject;
 

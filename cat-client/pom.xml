@@ -5,6 +5,7 @@
 		<groupId>com.dianping.cat</groupId>
 		<artifactId>parent</artifactId>
 		<version>3.0.0</version>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>cat-client</artifactId>
@@ -12,14 +13,8 @@
 	<packaging>jar</packaging>
 	<dependencies>
 		<dependency>
-			<groupId>org.unidal.framework</groupId>
 			<artifactId>foundation-service</artifactId>
-			<exclusions>
-				<exclusion>
-					<artifactId>plexus-utils</artifactId>
-					<groupId>org.codehaus.plexus</groupId>
-				</exclusion>
-			</exclusions>
+			<groupId>org.unidal.foundation</groupId>
 		</dependency>
 		<dependency>
 			<groupId>io.netty</groupId>
@@ -53,6 +48,14 @@
 		<dependency>
 			<groupId>org.codehaus.plexus</groupId>
 			<artifactId>plexus-utils</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-webapp</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-server</artifactId>
 		</dependency>
 	</dependencies>
 	<build>

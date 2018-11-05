@@ -32,8 +32,8 @@ import com.dianping.cat.report.ReportManager;
 import com.dianping.cat.service.ProjectService;
 import com.dianping.cat.statistic.ServerStatistic.Statistic;
 import com.dianping.cat.statistic.ServerStatisticManager;
-import org.codehaus.plexus.logging.LogEnabled;
-import org.codehaus.plexus.logging.Logger;
+import org.unidal.lookup.logging.LogEnabled;
+import org.unidal.lookup.logging.Logger;
 import org.unidal.lookup.annotation.Inject;
 import org.unidal.lookup.annotation.Named;
 

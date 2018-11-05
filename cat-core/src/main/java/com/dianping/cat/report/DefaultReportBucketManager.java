@@ -27,8 +27,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import org.codehaus.plexus.personality.plexus.lifecycle.phase.Initializable;
-import org.codehaus.plexus.personality.plexus.lifecycle.phase.InitializationException;
+import org.unidal.lookup.extension.Initializable;
+import org.unidal.lookup.extension.InitializationException;
 import org.unidal.helper.Scanners;
 import org.unidal.helper.Scanners.FileMatcher;
 import org.unidal.lookup.ContainerHolder;

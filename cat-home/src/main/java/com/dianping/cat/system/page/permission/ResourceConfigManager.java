@@ -21,8 +21,8 @@ package com.dianping.cat.system.page.permission;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.codehaus.plexus.personality.plexus.lifecycle.phase.Initializable;
-import org.codehaus.plexus.personality.plexus.lifecycle.phase.InitializationException;
+import org.unidal.lookup.extension.Initializable;
+import org.unidal.lookup.extension.InitializationException;
 import org.unidal.dal.jdbc.DalNotFoundException;
 import org.unidal.lookup.annotation.Inject;
 import org.unidal.lookup.annotation.Named;

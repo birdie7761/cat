@@ -36,9 +36,10 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
-import org.codehaus.plexus.logging.Logger;
+
 import org.unidal.helper.Splitters;
 import org.unidal.helper.Threads.Task;
+import org.unidal.lookup.logging.Logger;
 import org.unidal.lookup.util.StringUtils;
 import org.unidal.tuple.Pair;
 
@@ -64,7 +65,7 @@ public class ChannelManager implements Task {
 	private Logger m_logger;
 
 	public ChannelManager(Logger logger, List<InetSocketAddress> serverAddresses, ClientConfigManager configManager,
-							MessageIdFactory idFactory) {
+						  MessageIdFactory idFactory) {
 		m_logger = logger;
 		m_configManager = configManager;
 		m_idFactory = idFactory;

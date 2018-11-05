@@ -51,22 +51,50 @@
 			<dependency>
 				<groupId>org.unidal.framework</groupId>
 				<artifactId>dal-jdbc</artifactId>
-				<version>2.4.0</version>
+				<version>5.0.2</version>
 			</dependency>
 			<dependency>
-				<groupId>org.unidal.framework</groupId>
 				<artifactId>foundation-service</artifactId>
-				<version>2.5.0</version>
+				<groupId>org.unidal.foundation</groupId>
+				<version>5.0.2</version>
 			</dependency>
 			<dependency>
 				<groupId>org.unidal.framework</groupId>
 				<artifactId>web-framework</artifactId>
-				<version>2.4.0</version>
+				<version>5.0.2</version>
+				<exclusions>
+					<exclusion>
+						<artifactId>commons-io</artifactId>
+						<groupId>commons-io</groupId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>org.unidal.framework</groupId>
 				<artifactId>test-framework</artifactId>
-				<version>2.4.0</version>
+				<version>5.0.2</version>
+				<exclusions>
+					<exclusion>
+						<artifactId>jsp-api-2.1</artifactId>
+						<groupId>org.mortbay.jetty</groupId>
+					</exclusion>
+					<exclusion>
+						<artifactId>jetty</artifactId>
+						<groupId>org.mortbay.jetty</groupId>
+					</exclusion>
+					<exclusion>
+						<artifactId>javax.servlet</artifactId>
+						<groupId>org.eclipse.jetty.orbit</groupId>
+					</exclusion>
+					<exclusion>
+						<artifactId>javax.servlet.jsp</artifactId>
+						<groupId>org.eclipse.jetty.orbit</groupId>
+					</exclusion>
+					<exclusion>
+						<artifactId>servlet-api</artifactId>
+						<groupId>org.mortbay.jetty</groupId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>org.unidal.webres</groupId>
@@ -77,27 +105,6 @@
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
 				<version>4.8.1</version>
-			</dependency>
-			<dependency>
-				<groupId>org.mortbay.jetty</groupId>
-				<artifactId>jetty</artifactId>
-				<version>6.1.14</version>
-			</dependency>
-			<dependency>
-				<groupId>org.mortbay.jetty</groupId>
-				<artifactId>jetty-util</artifactId>
-				<version>6.1.14</version>
-			</dependency>
-			<dependency>
-				<groupId>org.mortbay.jetty</groupId>
-				<artifactId>jsp-api-2.1</artifactId>
-				<version>6.1.14</version>
-				<scope>provided</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.mortbay.jetty</groupId>
-				<artifactId>jsp-2.1</artifactId>
-				<version>6.1.14</version>
 			</dependency>
 			<dependency>
 			 	<groupId>javax.servlet</groupId>
@@ -190,6 +197,29 @@
 				<artifactId>plexus-utils</artifactId>
 				<version>3.0.20</version>
 			</dependency>
+			<dependency>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-webapp</artifactId>
+				<version>8.0.4.v20111024</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-server</artifactId>
+				<version>8.0.4.v20111024</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-servlets</artifactId>
+				<version>8.0.4.v20111024</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<artifactId>guava</artifactId>
+				<groupId>com.google.guava</groupId>
+				<version>19.0</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	<build>
@@ -247,12 +277,12 @@ org.eclipse.jdt.core.compiler.compliance=1.7
 				<plugin>
 					<groupId>org.unidal.maven.plugins</groupId>
 					<artifactId>codegen-maven-plugin</artifactId>
-					<version>3.0.1</version>
+					<version>4.0.3</version>
 				</plugin>
 				<plugin>
 					<groupId>org.unidal.maven.plugins</groupId>
 					<artifactId>plexus-maven-plugin</artifactId>
-					<version>3.0.1</version>
+					<version>4.0.3</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>
@@ -275,8 +305,8 @@ org.eclipse.jdt.core.compiler.compliance=1.7
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.2</version>
         <configuration>
-          <source>1.7</source>
-          <target>1.7</target>
+          <source>1.8</source>
+          <target>1.8</target>
         </configuration>
       </plugin>
 		</plugins>

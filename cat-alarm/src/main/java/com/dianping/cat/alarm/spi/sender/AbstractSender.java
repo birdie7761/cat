@@ -20,8 +20,8 @@ package com.dianping.cat.alarm.spi.sender;
 
 import com.dianping.cat.Cat;
 import com.dianping.cat.alarm.spi.config.SenderConfigManager;
-import org.codehaus.plexus.logging.LogEnabled;
-import org.codehaus.plexus.logging.Logger;
+import org.unidal.lookup.logging.LogEnabled;
+import org.unidal.lookup.logging.Logger;
 import org.unidal.helper.Files;
 import org.unidal.lookup.annotation.Inject;
 

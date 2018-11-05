@@ -28,9 +28,9 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.codehaus.plexus.logging.LogEnabled;
-import org.codehaus.plexus.logging.Logger;
-import org.codehaus.plexus.personality.plexus.lifecycle.phase.Initializable;
+import org.unidal.lookup.logging.LogEnabled;
+import org.unidal.lookup.logging.Logger;
+import org.unidal.lookup.extension.Initializable;
 import org.unidal.lookup.ContainerHolder;
 import org.unidal.lookup.annotation.Inject;
 

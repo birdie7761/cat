@@ -26,12 +26,12 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelFuture;
-import org.codehaus.plexus.logging.LogEnabled;
-import org.codehaus.plexus.logging.Logger;
 import org.unidal.helper.Threads;
 import org.unidal.helper.Threads.Task;
 import org.unidal.lookup.annotation.Inject;
 import org.unidal.lookup.annotation.Named;
+import org.unidal.lookup.logging.LogEnabled;
+import org.unidal.lookup.logging.Logger;
 
 import com.dianping.cat.ApplicationSettings;
 import com.dianping.cat.analyzer.LocalAggregator;

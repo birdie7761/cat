@@ -18,7 +18,7 @@
  */
 package com.dianping.cat.server;
 
-import org.codehaus.plexus.personality.plexus.lifecycle.phase.Initializable;
+import org.unidal.lookup.extension.Initializable;
 
 public interface DataSourceService<T> extends Initializable {
 

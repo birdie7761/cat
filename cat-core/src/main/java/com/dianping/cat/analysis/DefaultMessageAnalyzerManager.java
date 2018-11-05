@@ -25,19 +25,19 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.codehaus.plexus.logging.LogEnabled;
-import org.codehaus.plexus.logging.Logger;
-import org.codehaus.plexus.personality.plexus.lifecycle.phase.Initializable;
-import org.codehaus.plexus.personality.plexus.lifecycle.phase.InitializationException;
 import org.unidal.lookup.ContainerHolder;
 import org.unidal.lookup.annotation.Named;
+import org.unidal.lookup.extension.Initializable;
+import org.unidal.lookup.extension.InitializationException;
+import org.unidal.lookup.logging.LogEnabled;
+import org.unidal.lookup.logging.Logger;
 
 import com.dianping.cat.Cat;
 import com.dianping.cat.config.server.ServerConfigManager;
 
 @Named(type = MessageAnalyzerManager.class)
 public class DefaultMessageAnalyzerManager extends ContainerHolder
-						implements MessageAnalyzerManager, Initializable,	LogEnabled {
+						implements MessageAnalyzerManager, Initializable, LogEnabled {
 	private static final long MINUTE = 60 * 1000L;
 
 	protected Logger m_logger;
