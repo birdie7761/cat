@@ -5,6 +5,7 @@
 		<groupId>com.dianping.cat</groupId>
 		<artifactId>parent</artifactId>
 		<version>3.0.0</version>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>cat-consumer</artifactId>
@@ -45,6 +46,13 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		<dependency>
+			<groupId>xmlunit</groupId>
+			<artifactId>xmlunit</artifactId>
+			<version>1.6</version>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<plugins>
@@ -70,7 +78,7 @@
 								${basedir}/src/main/resources/META-INF/dal/model/matrix-report-manifest.xml,
 								${basedir}/src/main/resources/META-INF/dal/model/dependency-report-manifest.xml,
 								${basedir}/src/main/resources/META-INF/dal/model/storage-report-manifest.xml,
-								 ${basedir}/src/main/resources/META-INF/dal/model/business-report-manifest.xml,
+								${basedir}/src/main/resources/META-INF/dal/model/business-report-manifest.xml,
 							</manifest>
 						</configuration>
 					</execution>

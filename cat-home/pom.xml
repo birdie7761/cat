@@ -70,6 +70,13 @@
         </dependency>
 
         <dependency>
+            <groupId>xmlunit</groupId>
+            <artifactId>xmlunit</artifactId>
+            <version>1.6</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
             <groupId>org.unidal.framework</groupId>
             <artifactId>test-framework</artifactId>
             <scope>test</scope>
