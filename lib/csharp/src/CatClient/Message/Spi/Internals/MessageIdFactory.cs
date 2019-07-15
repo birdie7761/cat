@@ -3,13 +3,13 @@ using System;
 using System.Text;
 using System.IO;
 using System.IO.MemoryMappedFiles;
-using System.Security.Permissions;
 using System.Security;
 using System.Linq;
 using System.Threading;
 using System.Diagnostics;
 using System.Collections.Generic;
 using System.Collections.Concurrent;
+using System.Runtime.InteropServices;
 
 namespace Org.Unidal.Cat.Message.Spi.Internals
 {
@@ -220,10 +220,15 @@ namespace Org.Unidal.Cat.Message.Spi.Internals
         {
             string fileName = "cat-" + domain + ".mark";
             MemoryMappedFile mmf = null;
-
-            string[] dirs = new string[] {CatConstants.CAT_FILE_DIR, Path.GetTempPath(),
-                AppDomain.CurrentDomain.BaseDirectory + @"\data\appdatas\cat"};
-
+            var dirs = new List<string> { CatConstants.CAT_FILE_DIR, Path.GetTempPath() };
+#if !NETSTANDARD
+            dirs.Add(AppDomain.CurrentDomain.BaseDirectory + @"\data\appdatas\cat");
+#else
+            if (!RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+            {
+                dirs.Add(AppDomain.CurrentDomain.BaseDirectory + @"\data\appdatas\cat");
+            }
+#endif
             bool isFirst = true;
             foreach (string dir in dirs)
             {

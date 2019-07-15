@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace Org.Unidal.Cat
@@ -33,8 +34,11 @@ namespace Org.Unidal.Cat
         public const int TCP_RECONNECT_INTERVAL = 300 * 1000;
         public const int TCP_REBALANCE_INTERVAL = 600 * 1000;
         public const int TCP_CHECK_INTERVAL = 60000;
-
+#if !NETSTANDARD
         public const string CAT_FILE_DIR = @"D:\data\appdatas\cat";
+#else
+        public readonly static string CAT_FILE_DIR = RuntimeInformation.IsOSPlatform(OSPlatform.Linux) ? @"/data/appdatas/cat" : @"D:\data\appdatas\cat";        
+#endif
 
         /**
          * Remote call context info 
@@ -68,5 +72,26 @@ namespace Org.Unidal.Cat
         public const string EVENT_REDIS_SPEED = EVENT_REDIS + ".Speed";
         public const string EVENT_REDIS_SLOW = EVENT_REDIS + ".Slow";
         public const string EVENT_REDIS_LONG_KEY = EVENT_REDIS + ".LongKey";
+
+        /**
+         *  DurationRang
+         */
+        public readonly static List<KeyValuePair<long, String>> DURATION_LIST = new List<KeyValuePair<long, string>>
+        {
+            new KeyValuePair<long, string>(10,"0~10ms"),
+            new KeyValuePair<long, string>(50,"10~50ms"),
+            new KeyValuePair<long, string>(100,"50~100ms"),
+            new KeyValuePair<long, string>(200,"100~200ms"),
+            new KeyValuePair<long, string>(500,"200~500ms"),
+            new KeyValuePair<long, string>(1000,"500ms~1s"),
+            new KeyValuePair<long, string>(5000,"1~5s"),
+            new KeyValuePair<long, string>(10000,"5~10s"),
+            new KeyValuePair<long, string>(20000,"10~20s"),
+            new KeyValuePair<long, string>(30000,"20~30s"),
+            new KeyValuePair<long, string>(50000,"30~50s"),
+            new KeyValuePair<long, string>(120000,"50~120s"),
+            new KeyValuePair<long, string>(300000,"2~5m"),
+            new KeyValuePair<long, string>(600000,"5~10m"),
+        };
     }
 }

@@ -12,6 +12,7 @@ using System.IO;
 using System.Reflection;
 using System.Collections.Generic;
 using Org.Unidal.Cat.Configuration;
+using System.Runtime.InteropServices;
 
 namespace Org.Unidal.Cat.Message.Spi.Internals
 {
@@ -56,8 +57,11 @@ namespace Org.Unidal.Cat.Message.Spi.Internals
                 if (null != currentProcess) userName = currentProcess.StartInfo.UserName;
                 
                 arch = Environment.GetEnvironmentVariable("PROCESSOR_ARCHITECTURE");
-
+#if !NETSTANDARD
                 ntVersion = Environment.OSVersion.Version.Major + "." + Environment.OSVersion.Version.Minor;
+#else
+                ntVersion = RuntimeInformation.OSDescription;
+#endif
 
                 processorCount = Environment.ProcessorCount;
 

@@ -18,6 +18,7 @@
  */
 package com.dianping.cat.report;
 
+import org.unidal.lookup.annotation.Named;
 import org.unidal.web.mvc.AbstractModule;
 import org.unidal.web.mvc.annotation.ModuleMeta;
 import org.unidal.web.mvc.annotation.ModulePagesMeta;
